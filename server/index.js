@@ -31,7 +31,7 @@ app.get('/user',async function(req,res){
     res.redirect('/')
 })
 
-app.post('/filechnage', async function (req, res) {
+app.post('/filechange', async function (req, res) {
     const file = req.body;
     var result= await db.findOneAndUpdate({email:'demo@gmaidddddl9090.fffcom'},{files:file})
     res.status(201).send(JSON.stringify(result.files[0]));  // sends a response to the client
