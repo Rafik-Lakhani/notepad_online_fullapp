@@ -5,7 +5,7 @@ import { useSearchParams } from "react-router-dom";
 
 
 async function fetchFiles() {
-  const response = await fetch('http://localhost:3000/', {
+  const response = await fetch(`${String(import.meta.env.VITE_API_URL)}`, {
     headers: { "Content-Type": "application/json" },
     method: "GET",
   });
@@ -15,11 +15,6 @@ async function fetchFiles() {
     return [];
   }
 }
-
-
-
-
-
 
 
 function Home() {

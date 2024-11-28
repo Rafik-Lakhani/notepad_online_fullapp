@@ -13,7 +13,7 @@ const initialState = {
 async function filechnages(files) {
   console.log("Files being sent:", files);
   // implement your API call here
-  return await fetch('http://localhost:3000/filechnage',
+  return await fetch(`${String(import.meta.env.VITE_API_URL)}filechange`,
     { headers: { "Content-Type": "application/json" }, method: "POST", body: files })
     .then(async response => {
       if (response.ok) {
